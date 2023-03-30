@@ -51,12 +51,8 @@ void* pop(ArrayList * l, int i){
   {
     i = l->size - abs(i % l->size);
   }
-  if(l->capacity == l->size)
-  {
-    l->data = realloc(l->data, 2 * l->capacity);
-    l->capacity = 2 * l->capacity;
-  }  
-  for(int k = i; k < l->size; k++)
+
+  for(int k = i; k < l->size - 1; k++)
   {
     l->data[k] = l->data[k + 1];
   }
