@@ -237,3 +237,17 @@ Thu 30 Mar 2023 07:49:34 PM UTC:
  tests:  11|1
 total_score: 50/70
 fd3e45a
+Thu 30 Mar 2023 07:50:43 PM UTC: 
+ arraylist.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘clean’:
+arraylist.c:83:12: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   83 |     return local;
+      |            ^~~~~
+arraylist.c:76:6: note: declared here
+   76 | void clean(ArrayList * l){
+      |      ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+a16e726

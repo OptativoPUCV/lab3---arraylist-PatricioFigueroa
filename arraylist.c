@@ -51,7 +51,6 @@ void* pop(ArrayList * l, int i){
   {
     i = l->size - abs(i % l->size);
   }
-
   for(int k = i; k < l->size - 1; k++)
   {
     l->data[k] = l->data[k + 1];
@@ -75,5 +74,11 @@ int get_size(ArrayList * l){
 
 //remove elements
 void clean(ArrayList * l){
-    
+  free(l);
+    ArrayList *local = NULL;
+  local = malloc(sizeof(ArrayList));
+  local->data = malloc(2*sizeof(void *));
+  local->capacity = 2;
+  local->size = 0;
+    return local;
 }
