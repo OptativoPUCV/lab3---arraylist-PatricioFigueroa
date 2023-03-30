@@ -16,7 +16,7 @@ ArrayList *createList(void) {
   local->data = malloc(2*sizeof(void *));
   local->capacity = 2;
   local->size = 0;
-    return local;
+  return local;
 }
 
 void append(ArrayList * l, void * data){
@@ -76,5 +76,6 @@ int get_size(ArrayList * l){
 void clean(ArrayList * l){
   ArrayList *aux = l;
   l = createList();
+  free(aux->data);
   free(aux);
 }
