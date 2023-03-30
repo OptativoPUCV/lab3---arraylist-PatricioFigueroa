@@ -275,3 +275,17 @@ Thu 30 Mar 2023 07:56:37 PM UTC:
  tests:  11|1
 total_score: 50/70
 6e6dcec
+Thu 30 Mar 2023 08:00:19 PM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘clean’:
+arraylist.c:79:44: error: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘void *’ [-Werror=format=]
+   79 |   printf("\n Este es size del arraylist : %d\n", l->data[0]);
+      |                                           ~^     ~~~~~~~~~~
+      |                                            |            |
+      |                                            int          void *
+      |                                           %p
+cc1: all warnings being treated as errors
+Compilation failed
+f691b42
