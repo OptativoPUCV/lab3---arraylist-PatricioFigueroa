@@ -36,7 +36,6 @@ void push(ArrayList * l, void * data, int i){
     l->data = realloc(l->data, 2 * l->capacity);
     l->capacity = 2 * l->capacity;
   }  
-  void * aux = NULL;
   for(int k = l->capacity - 2; k != i; k--)
   {
     l->data[k] = l->data[k + 1];
