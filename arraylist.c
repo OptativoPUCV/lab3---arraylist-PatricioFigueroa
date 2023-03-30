@@ -76,7 +76,7 @@ int get_size(ArrayList * l){
 void clean(ArrayList * l){
   ArrayList *aux = l;
   l = createList();
-  printf("\n Este es size del arraylist : %p\n", l->data[1]);
+  printf("\n Este es size del arraylist : %d\n", l->capacity);
   free(aux->data);
   free(aux);
 }
