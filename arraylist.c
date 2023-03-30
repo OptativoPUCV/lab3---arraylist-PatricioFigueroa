@@ -11,7 +11,7 @@ typedef struct ArrayList {
 } ArrayList;
 
 ArrayList *createList(void) {
-  ArrayList *local;
+  ArrayList *local = NULL;
   local->data = calloc(2, sizeof(void *));
   local->capacity = 2;
   local->size = 0;
