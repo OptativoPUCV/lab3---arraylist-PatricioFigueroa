@@ -77,5 +77,4 @@ void clean(ArrayList * l){
   l->data = malloc(2*sizeof(void *));
   l->capacity = 2;
   l->size = 0;
-  printf("\n%p\n", l->data[3]); 
 }
